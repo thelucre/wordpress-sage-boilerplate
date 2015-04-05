@@ -1,3 +1,14 @@
+# Setup
+
+1. 'npm install -g npm@latest'
+
+2. If you haven't, run `npm install -g gulp bower`
+
+3. `npm install`
+
+4. `bower install`
+
+
 # Notes 
 
 1. Set `assets/manifest.json` dev url for live reloading 
@@ -27,6 +38,12 @@ baseUrl: '/wp-content/themes/MY_FOLDER/assets/scripts',
 
 3. Activate thhis theme globally for the network in Wordpress admin 
 
+
+# Wordpress Plugins 
+
+1. Custom Post Type UI 1.0.5
+
+2. Advanced Custom Fields
 
 <!---
 # [Sage](https://roots.io/sage/)
