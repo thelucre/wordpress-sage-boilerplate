@@ -2,7 +2,7 @@
 // This paths get appended to by `grunt bower`. The map
 // is there so that calls to underscore resolve to lodash.
 require.config({
-  baseUrl: '/wp-content/themes/grigio/assets/scripts',
+  baseUrl: '/wp-content/themes/lucre/assets/scripts',
   stubModules: [
     'text'
   ],

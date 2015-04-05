@@ -7,9 +7,16 @@
 }
 ```
 
-2. SASS will build from `assets/styles/main.scss`
+2. SASS will build from `assets\styles\main.scss`
 
 3. Require will fire `assets\scripts\start.js`
+
+4. Update the base URL for require in `assets\scripts\main.js`:
+
+```js
+baseUrl: '/wp-content/themes/MY_FOLDER/assets/scripts',
+```
+
 
 
 # Wordpress multisite setup for dev
