@@ -11,6 +11,9 @@ require.config({
       underscore: 'lodash'
     }
   },
+  shim : {
+    bootstrap : { "deps" :['jquery'] }
+  },
   paths: {
     jquery: 'empty:',
     bkwld: 'bower_components/bkwld',
@@ -20,7 +23,8 @@ require.config({
     fastclick: 'bower_components/fastclick/lib/fastclick',
     'requirejs-text': 'bower_components/requirejs-text/text',
     modernizr: 'bower_components/modernizr/modernizr',
-    velocity: 'bower_components/velocity/velocity'
+    velocity: 'bower_components/velocity/velocity',
+    bootstrap: 'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap'
   },
   packages: [
 
@@ -28,4 +32,4 @@ require.config({
 });
 
 // Start the application
-require(['modernizr', 'velocity','start']);
+require(['bootstrap', 'modernizr', 'velocity','start']);
