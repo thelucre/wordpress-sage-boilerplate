@@ -1,0 +1,10 @@
+@import "header";
+
+a {
+	transition: color 150ms ease-in-out;
+	color: #0f0;
+
+	&:hover {
+		color: darken(#0f0,10%);
+	}
+}

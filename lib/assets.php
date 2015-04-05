@@ -66,6 +66,8 @@ function asset_path($filename) {
   if (WP_ENV !== 'development' && array_key_exists($file, $manifest->get())) {
     return $dist_path . $directory . $manifest->get()[$file];
   } else {
+    if($filename == 'styles/main.css')
+        return $dist_path . $directory . $file;
     return get_template_directory_uri() . '/assets/' . $directory . $file;
   }
 }
