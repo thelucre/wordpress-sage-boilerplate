@@ -8,6 +8,7 @@ define(function (require) {
 	require('bkwld/console');
 	require('bkwld/csrf');
 	require('bkwld/jquery-views');
+	require('shared/sage');
 
 	// AMD dependencies and var assignments
 	var $ = require('jquery')
