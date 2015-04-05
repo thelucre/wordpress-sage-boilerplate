@@ -3,7 +3,7 @@
 1. Set `assets/manifest.json` dev url for live reloading 
 ```js
 "config": {
-	"devUrl": "http://grigio.wordpress.dev"
+	"devUrl": "http://mysite.wordpress.dev"
 }
 ```
 
