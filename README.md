@@ -1,9 +1,25 @@
-1. Set assets/manifest.json dev url
+# Notes 
+
+1. Set `assets/manifest.json` dev url for live reloading 
 ```js
 "config": {
 	"devUrl": "http://grigio.wordpress.dev"
 }
 ```
+
+2. SASS will build from `assets/styles/main.scss`
+
+3. Require will fire `assets\scripts\start.js`
+
+
+# Wordpress multisite setup for dev
+
+1. Create a local  [Wordpress network](http://codex.wordpress.org/Create_A_Network)
+
+2. Setup MAMP subdomain wildcards as needed 
+
+3. Activate thhis theme globally for the network in Wordpress admin 
+
 
 <!---
 # [Sage](https://roots.io/sage/)
