@@ -66,7 +66,7 @@ function asset_path($filename) {
   if (WP_ENV !== 'development' && array_key_exists($file, $manifest->get())) {
     return $dist_path . $directory . $manifest->get()[$file];
   } else {
-    return $dist_path . $directory . $file;
+    return get_template_directory_uri() . '/assets/' . $directory . $file;
   }
 }
 
@@ -119,9 +119,8 @@ function assets() {
     wp_enqueue_script('comment-reply');
   }
 
-  wp_enqueue_script('modernizr', asset_path('scripts/modernizr.js'), [], null, true);
-  wp_enqueue_script('jquery');
-  wp_enqueue_script('sage_js', asset_path('scripts/main.js'), [], null, true);
+  wp_enqueue_script('require', asset_path('scripts/require-jquery.js'), [], null, true);
+  wp_enqueue_script('main', asset_path('scripts/main.js'), [], null, true);
 }
 add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\assets', 100);
 
