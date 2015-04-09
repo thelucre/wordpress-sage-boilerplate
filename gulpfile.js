@@ -1,6 +1,6 @@
 // ## Globals
 /*global $:true*/
-var $           = require('gulp-load-plugins')();
+var $           = require('gulp-load-plugins')({rename: {'gulp-jade-php': 'jade' }});
 var argv        = require('yargs').argv;
 var browserSync = require('browser-sync');
 var gulp        = require('gulp');
@@ -205,6 +205,14 @@ gulp.task('jshint', function() {
     .pipe($.jshint.reporter('fail'));
 });
 
+// ### Jade Templates
+// be careful - these views will overwrite the defaults in the root
+gulp.task('jade', function() {
+  gulp.src('./assets/views/**/*.jade')
+    .pipe($.jade())
+    .pipe(gulp.dest('.'));
+});
+
 // ### Clean
 // `gulp clean` - Deletes the build folder entirely.
 gulp.task('clean', require('del').bind(null, [path.dist]));
@@ -223,6 +231,7 @@ gulp.task('watch', function() {
       blacklist: ['/wp-admin/**']
     }
   });
+  gulp.watch([path.source + 'views/**/*'], ['jade']);
   gulp.watch([path.source + 'styles/**/*'], ['styles']);
   gulp.watch([path.source + 'scripts/**/*'], ['jshint', 'scripts']);
   gulp.watch([path.source + 'fonts/**/*'], ['fonts']);
