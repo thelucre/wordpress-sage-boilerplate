@@ -209,8 +209,13 @@ gulp.task('jshint', function() {
 // be careful - these views will overwrite the defaults in the root
 gulp.task('jade', function() {
   gulp.src('./assets/views/**/*.jade')
-    .pipe($.jade())
-    .pipe(gulp.dest('.'));
+    .pipe($.jade({ pretty : true }))
+    .on('error', function(err) {
+        console.error(err.message);
+        this.emit('end');
+    })
+    .pipe(gulp.dest('.'))
+    ;
 });
 
 // ### Clean
